@@ -1,50 +1,27 @@
 <!DOCTYPE heml>
 <html>
 <head>
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-<title>Disable Ctrl Key Combinations </title>
-<script language="JavaScript">
-
-function disableCtrlKeyCombination(e)
-{
-//list all CTRL + key combinations you want to disable
-var forbiddenKeys = new Array('x', 'n', 't', 'x', 'w', 'j' , 'w', 'i', 'p',);
-var key;
-var isCtrl;
-if(window.event)
-{
-key = window.event.keyCode;     //IE
-if(window.event.ctrlKey)
-isCtrl = true;
-else
-isCtrl = false;
-}
-else
-{
-key = e.which;     //firefox
-if(e.ctrlKey)
-isCtrl = true;
-else
-isCtrl = false;
-}
-//if ctrl is pressed check if other key is in forbidenKeys array
-if(isCtrl)
-{
-for(i=0; i<forbiddenKeys.length; i++)
-{
-//case-insensitive comparation
-if(forbiddenKeys[i].toLowerCase() == String.fromCharCode(key).toLowerCase())
-{
-alert('Key combination CTRL + '+String.fromCharCode(key) +' has been disabled.');
-return false;
-}
-}
-}
-return true;
-}
-</script>
+<title>ACO TEST PAGE</title>
 </head>
-<body onkeypress="return disableCtrlKeyCombination(event);" onkeydown="return disableCtrlKeyCombination(event);">
-ACO WebModeration short key testing!
+<body>
+<div id="disqus_thread"></div>
+<script>
+    /**
+    *  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
+    *  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables    */
+    /*
+    var disqus_config = function () {
+    this.page.url = https://ayaan-codes.github.io/test/;  // Replace PAGE_URL with your page's canonical URL variable
+    this.page.identifier = ACOID?231231231423423424534543534634657565675687687997870089789897895756745643534523141242342343; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+    };
+    */
+    (function() { // DON'T EDIT BELOW THIS LINE
+    var d = document, s = d.createElement('script');
+    s.src = 'https://aco-1.disqus.com/embed.js';
+    s.setAttribute('data-timestamp', +new Date());
+    (d.head || d.body).appendChild(s);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
 </body>
 </html>
